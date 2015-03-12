@@ -1,4 +1,4 @@
-"Docker - Its My Code in a Box" presentation by Tim Crowley on March 25th, 2015 at SSEUG meeting.
+# "Docker - Its My Code in a Box" presentation by Tim Crowley on March 25th, 2015 at SSEUG meeting.
 
 Meeting agenda: http://srqsoftware.github.io/03-25-2015_Docker-Its_My_Code_in_a_Box/
 
