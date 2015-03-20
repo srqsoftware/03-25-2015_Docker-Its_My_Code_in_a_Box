@@ -1,0 +1,4 @@
+FROM tomcat:8.0
+RUN apt-get update
+ADD ./cfg/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
+ADD ./cfg/basicweb.war /usr/local/tomcat/webapps/basicweb.war
