@@ -23,6 +23,13 @@ public class DefaultController {
 	@Autowired
 	ActivityService activityService;
 
+	@RequestMapping(value="/environment.htm", method = RequestMethod.GET)
+	public String environment(Model model) {
+		Map<String,String> allEnv = System.getenv();
+		model.addAttribute("environment", allEnv);
+		return "environment";
+	}
+	
 	@RequestMapping(value="/list.htm", method = RequestMethod.GET)
 	public String basicList(Model model) {
 		try {
@@ -83,6 +90,7 @@ public class DefaultController {
 
 			try {
 				activity.setUserId("timothy");
+				activity.setDate(new Date());
 				activityService.create(activity);
 				status.setComplete();
 				return "redirect:list.htm";
